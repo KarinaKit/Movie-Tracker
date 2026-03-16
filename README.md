@@ -22,7 +22,7 @@ JavaScript (Vanilla JS): Обработка событий формы (submit, i
 LocalStorage API: Чтение и запись данных в формате JSON.
 
 🔗Ссылка:
-[https://karinakit.github.io/Movie-Tracker/]
+[]
 
 📎 
 ![Скриншот интерфейса:](./img/screen.png)
