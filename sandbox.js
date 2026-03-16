@@ -5,7 +5,7 @@ function handleFormSubm(e) {
     const genre = document.querySelector('#genre').value;
     const releaseYear = document.querySelector('#releaseYear').value;
     const range = document.querySelector('#range').value;
-    const isWatched = document.querySelector('#isWatched').checked;
+    // const isWatched = document.querySelector('#isWatched').checked;
 
     const film = {
         id: Date.now(),
@@ -13,7 +13,7 @@ function handleFormSubm(e) {
         genre,
         releaseYear,
         range,
-        isWatched,
+        isWatched: false,
     }
 
     addFilmToLocalStorage(film);
@@ -56,7 +56,7 @@ function renderTable() {
                 <td>${film.releaseYear}</td>
                 <td>${film.range}</td>
                 <td class="status-cell" onclick="toggleWatched(${film.id})">
-                ${film.isWatched ? 'Да' : 'Нет'}
+                    ${film.isWatched ? 'Да' : 'Нет'}
                 </td>
                 <td>
                     <button class="delete-btn" onclick="deleteFilm(${film.id})">Удалить</button>
