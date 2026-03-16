@@ -21,5 +21,5 @@ JavaScript (Vanilla JS): Обработка событий формы (submit, i
 
 LocalStorage API: Чтение и запись данных в формате JSON.
 
-📎 ![Скриншот интерфейса:](.img/screen.png)
+📎 ![Скриншот интерфейса:](./img/screen.png)
 
