@@ -21,12 +21,31 @@ function handleFormSubm(e) {
     document.querySelector('#rangeValue').textContent = '0';
 }
 
+function editFilm(id) {
+    const films = JSON.parse(localStorage.getItem('films')) || [];
+
+    const filmToEdit = films.find(f => f.id === id);
+
+    if(filmToEdit) {
+        document.querySelector('#title').value = filmToEdit.title;
+        document.querySelector('#genre').value = filmToEdit.genre;
+        document.querySelector('#releaseYear').value = filmToEdit.releaseYear;
+        document.querySelector('#range').value = filmToEdit.range;
+        document.querySelector('#rangeValue').textContent = filmToEdit.range;
+
+    }
+
+    deleteFilm(id);
+}
+
 function deleteFilm(id) {
     let films = JSON.parse(localStorage.getItem('films')) || [];
 
     films = films.filter(film => film.id !==id);
 
     localStorage.setItem('films', JSON.stringify(films));
+
+    deleteFilm(id);
 
     renderTable();
 }
@@ -58,8 +77,9 @@ function renderTable() {
                 <td class="status-cell" onclick="toggleWatched(${film.id})">
                     ${film.isWatched ? 'Да' : 'Нет'}
                 </td>
+                <td><button class="edit" onclick="editFilm(${film.id})">⚙️</td>
                 <td>
-                    <button class="delete-btn" onclick="deleteFilm(${film.id})">Удалить</button>
+                    <button class="delete-btn" onclick="deleteFilm(${film.id})">🗑️</button>
                 </td>`;
 
         filmTableBody.appendChild(row);

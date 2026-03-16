@@ -43,6 +43,10 @@ form input[type="submit"]:hover {
   cursor: pointer;
 }
 
+.table-th {
+  text-align: center;
+}
+
 .range-btn {
   display: flex;
   flex-direction: column;
@@ -82,8 +86,8 @@ th {
   color: #fff;
 }
 
-td {
-  vertical-align: top;
+.table-row {
+  text-align: center;
 }
 
 .status-cell {
@@ -96,11 +100,29 @@ td {
   color: firebrick;
 }
 
+.edit {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  padding: 8px 18px;
+  color: #f4f4f4;
+  border-radius: 15px;
+  border: none;
+}
+
+.table-row:hover .edit {
+  opacity: 1;
+}
+
+.edit:hover {
+  background-color: #002ccc;
+}
+
+
 .delete-btn {
   opacity: 0;
   transition: opacity 0.3s ease;
   cursor: pointer;
-  background-color: #4e0c0c;
   padding: 8px 18px;
   color: #f4f4f4;
   border-radius: 15px;
