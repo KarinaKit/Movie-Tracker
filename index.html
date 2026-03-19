@@ -8,7 +8,7 @@
 </head>
 <body>
     <form id="film-form">
-        <label for="tigle">Название:</label>
+        <label for="title">Название:</label>
             <input type="text" id="title" name="title"/>
         <label for="genre">Жанр:</label>
             <input type="text" id="genre" name="genre"/>
@@ -21,22 +21,37 @@
             <button type="submit" class="add-btn">Добавить</button>
         </div>
     </form>
-    <table id="film-table">
+    <form id="search-film">
+        <label for="title">
+            <input type="text" id="searchText" name="title" oninput="extendedSearch()" placeholder="Название">
+        </label>
+        <label for="genre">
+            <input type="text" id="searchGenre" name="genre" oninput="extendedSearch()" placeholder="Жанр">
+        </label>
+        <label for="releaseYear">
+            <input type="text" id="searchRYear" name="releaseYear" oninput="extendedSearch()" placeholder="Год релиза">
+        </label>
+        <!-- <label for="Btn">
+            <button type="button" id="search-button">Поиск</button>
+        </label> -->
+    </form>
+    <div class="table-wrapper">
+        <table id="film-table">
     <thead class="table-th">
         <tr>
-            <th>Название</th>
-            <th>Жанр</th>
-            <th>Год</th>
-            <th>Оценка</th>
-            <th>Успели посмотреть?</th>
-            <th>Редактировать</th>
-            <th>Удалить</th>
+            <th>Movie</th>
+            <th>Genre</th>
+            <th>Year</th>
+            <th>Grade</th>
+            <th>viewed</th>
+            <th>⚙️🗑️</th>
         </tr>
     </thead>
     <tbody id="film-tbody">
             <!-- Rows will be inserted here -->
         </tbody>
     </table>
+    </div>
     <script src="sandbox.js"></script>
 </body>
 </html>

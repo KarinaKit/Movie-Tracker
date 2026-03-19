@@ -34,9 +34,28 @@ function editFilm(id) {
         document.querySelector('#rangeValue').textContent = filmToEdit.range;
 
     }
-
     deleteFilm(id);
 }
+
+function extendedSearch() {
+    const textQuery = document.querySelector('#searchText').value.toLowerCase();
+    const genreQuery = document.querySelector('#searchGenre').value.toLowerCase();
+    const yearQuery = document.querySelector('#searchRYear').value;
+
+    const allFilms = JSON.parse(localStorage.getItem('films')) || [];
+
+    const filtred = allFilms.filter(film => {
+        const matchText = film.title.toLowerCase().includes(textQuery);
+        
+        const matchGenre = film.genre.toLowerCase().includes(genreQuery);
+        
+        const matchYear = !yearQuery || film.releaseYear.toString() === yearQuery;
+
+        return matchText && matchGenre && matchYear;
+    });
+    renderTable(filtred);
+}
+
 
 function deleteFilm(id) {
     let films = JSON.parse(localStorage.getItem('films')) || [];
@@ -58,12 +77,13 @@ function addFilmToLocalStorage(film) {
     renderTable();
 }
 
-function renderTable() {
-        const films = JSON.parse(localStorage.getItem('films')) || [];
+function renderTable(filmsToRender) {
+
+        const films = filmsToRender || JSON.parse(localStorage.getItem('films')) || [];
         
         const filmTableBody = document.querySelector('#film-tbody');
 
-        filmTableBody.innerHTML = ""
+        filmTableBody.textContent = ''
 
         films.forEach((film) => {
             const row = document.createElement('tr');
@@ -77,8 +97,7 @@ function renderTable() {
                 <td class="status-cell" onclick="toggleWatched(${film.id})">
                     ${film.isWatched ? 'Да' : 'Нет'}
                 </td>
-                <td><button class="edit" onclick="editFilm(${film.id})">⚙️</td>
-                <td>
+                <td><button class="edit" onclick="editFilm(${film.id})">⚙️
                     <button class="delete-btn" onclick="deleteFilm(${film.id})">🗑️</button>
                 </td>`;
 
