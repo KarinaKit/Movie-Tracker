@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/catalog.css">
+    <link rel="icon" href="./img/filmBox.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>FilmBox</title>
+</head>
+<body>
+    <header id="header">
+        <div class="search__header">
+
+            <img src="" alt="FilmBox">
+
+            <div class="catalog__film-search">
+                <div class="dropdown">
+            <span class="menu-title">Фильмы</span>
+
+            <div class="dropdown-content">
+
+                <div class="group">
+                    <div class="section">Жанры:</div>
+                    <a href="#" class="choice__genre" class="genre-link" data-genre="all">Все жанры</a>
+                    <a href="#" class="choice__genre" data-genre="comedy">Комедия</a>
+                    <a href="#" class="choice__genre" data-genre="drama">Драма</a>
+                    <a href="#" class="choice__genre" data-genre="melodrama">Мелодрамы</a>
+                    <a href="#" class="choice__genre" data-genre="triller">Боевик</a>
+                    <a href="#" class="choice__genre" data-genre="horror">Ужасы</a>
+                    <a href="#" class="choice__genre" data-genre="biographical">Биографическое</a>
+                    <a href="#" class="choice__genre" data-genre="westerns">Вестерны</a>
+                    <a href="#" class="choice__genre" data-genre="military">Военные</a>
+                    <a href="#" class="choice__genre" data-genre="documentaries">Документальные</a>
+                    <a href="#" class="choice__genre" data-genre="detective">Дедективные</a>
+                    <a href="#" class="choice__genre" data-genre="historical">Исторические</a>
+                    <a href="#" class="choice__genre" data-genre="crime">Криминал</a>
+                    <a href="#" class="choice__genre" data-genre="musical">Мюзикл</a>
+                    <a href="#" class="choice__genre" data-genre="adventures">Приключения</a>
+                    <a href="#" class="choice__genre" data-genre="family">Семейные</a>
+                    <a href="#" class="choice__genre" data-genre="science-fiction">Фантастика</a>
+                    <a href="#" class="choice__genre" data-genre="fantasy">Фэнтези</a>
+                </div>
+
+                <div class="group">
+                <div class="section">Год</div>
+                    <a href="#">2020-2026</a>
+                    <a href="#">2014-2020</a>
+                    <a href="#">2007-2013</a>
+                    <a href="#">1998-2006</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="search__series">
+            <button type="button" id="series" class="btn__series">Сериалы</button>
+        </div>
+
+        <div class="search__cartoons">
+            <button type="button" id="cartoons" class="btn__cartoon">Мультфильмы</button>
+        </div>
+
+        <div class="search__film">
+            <form id="search__film-title">
+
+                <input type="text" name="title" placeholder="Введите название" id="search__name" class="film__name">
+
+                <div id="result"></div>
+
+            </form>
+        </div>
+
+        <div class="entrance">
+            <button id="login"><a href="./signin.html">Войти</a></button>
+        </div>
+        </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="content">
+            <section class="hero-slider">
+            <div class="slider">
+
+                <div class="click-zone left"></div>
+                <div class="click-zone right"></div>
+
+                <img src="./img/vampire.jpg" class="img-cap" alt="Дневники вампира">
+            </div>
+            <div class="next-prev">
+                <button class="slider-btn prev">←</button>
+                <button class="slider-btn next">→</button>
+            </div>
+        </section>
+
+        <section class="slider__link">
+            <div class="track">
+            
+                <div class="slide">
+                    <a class="list__link" href="#">
+                    <img src="./img/create_list.png" class="create__list">
+                </a>
+                </div>
+            
+                <div class="slide">
+                    <a class="list__link" href="#">
+                    <img src="./img/create_list.png" class="create__list">
+                </a>
+                </div>
+            
+                <div class="slide">
+                    <a class="list__link" href="#">
+                    <img src="./img/create_list.png" class="create__list">
+                </a>
+                </div>
+
+                <div class="slide">
+                    <a class="list__link" href="#">
+                    <img src="./img/create_list.png" class="create__list">
+                </a>
+                </div>
+            
+                <div class="slide">
+                    <a class="list__link" href="#">
+                    <img src="./img/create_list.png" class="create__list">
+                </a>
+                </div>
+            
+                <div class="slide">
+                    <a class="list__link" href="#">
+                    <img src="./img/create_list.png" class="create__list">
+                </a>
+                </div>
+            
+            </div>
+        </section>
+
+        <section class="catalog__films">
+            <div class="btn__choice">
+                <!-- <button id="btn" class="btn__series"><a href="#" class="btn__link">Сериалы</a></button> -->
+                <button id="btn" class="btn__popular"><a href="#" class="btn__link">Популярные</a></button>
+                <button id="btn" class="btn__new"><a href="#" class="btn__link">Новинки</a></button>
+            </div>
+
+            <div class="catalog__cinema">
+
+                <div class="card__film" data-genre="fantasy" data-type="series">
+                    <div class="film">
+                        <h4 class="title">Дневники вампира</h4>
+                        <a href="#" class="card__img">
+                            <img src="./img/vampireDiaries 2.jpg" alt="Дневники вампира" class="picture__dv" width="216" height="312">
+                        </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">8.9</span>
+                        <span class="year__film">2009</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card__film" data-genre="melodrama">
+                    <div class="film">
+                        <h4 class="title">Дневник памяти</h4>
+                        <a href="#" class="card__img">
+                        <img src="./img/dear.jpg" alt="Дневники вампира" class="picture__dv" width="216" height="312">
+                    </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">8.2</span>
+                        <span class="year__film">2004</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card__film" data-genre="science-fiction" data-type="series" data-popular="true">
+                    <div class="film">
+                        <h4 class="title">Тьма</h4>
+                        <a href="#" class="card__img">
+                        <img src="./img/dark.jpg" alt="Дневники вампира" class="picture__dv" width="216" height="312">
+                    </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">8.7</span>
+                        <span class="year__film">2020</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card__film" data-genre="fantasy horror" data-type="series" data-new="true">
+                    <div class="film">
+                        <h4 class="title">Извне</h4>
+                        <a href="#" class="card__img">
+                        <img src="./img/from.webp" alt="Дневники вампира" class="picture__dv" width="216" height="312">
+                    </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">7.8</span>
+                        <span class="year__film">2022</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card__film" data-genre="fantasy adventures comedy" data-type="cartoon">
+                    <div class="film">
+                        <h4 class="title">Хильда</h4>
+                        <a href="#" class="card__img">
+                        <img src="./img/hil_da.jpeg" alt="Дневники вампира" class="picture__dv" style=" height: 311px;">
+                    </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">8.5</span>
+                        <span class="year__film">2018</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card__film" data-genre="fantasy adventures comedy" data-type="cartoon">
+                    <div class="film">
+                        <h4 class="title">Гравити фолз</h4>
+                        <a href="#" class="card__img">
+                        <img src="./img/gravity.jpg" alt="Дневники вампира" class="picture__dv" width="216" height="312">
+                    </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">9.0</span>
+                        <span class="year__film">2012</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card__film" data-genre="fantasy">
+                    <div class="film">
+                        <h4 class="title">Гарри Поттер</h4>
+                        <a href="#" class="card__img">
+                        <img src="./img/harry.jpeg" alt="Дневники вампира" class="picture__dv" width="216" height="312">
+                    </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">8.3</span>
+                        <span class="year__film">2001</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card__film" data-genre="fantasy" data-type="series" data-popular="true">
+                    <div class="film">
+                        <h4 class="title">Призраки</h4>
+                        <a href="#" class="card__img">
+                        <img src="./img/ghosts.jpg" alt="Дневники вампира" class="picture__dv" width="216" height="312">
+                    </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">8.0</span>
+                        <span class="year__film">2019</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card__film" data-genre="melodrama" data-type="series">
+                    <div class="film">
+                        <h4 class="title">Постучись в мою дверь</h4>
+                        <a href="#" class="card__img">
+                        <img src="./img/постучись.jpg" alt="Дневники вампира" class="picture__dv" width="216" height="312">
+                    </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">8.9</span>
+                        <span class="year__film">2009</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card__film" data-genre="documentaries" data-popular="true" data-new="true">
+                    <div class="film">
+                        <h4 class="title">Бухта вдов</h4>
+                        <a href="#" class="card__img">
+                        <img src="./img/бух.png" alt="Дневники вампира" class="picture__dv" width="216" height="312">
+                    </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">7.8</span>
+                        <span class="year__film">2026</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card__film" data-genre="horror">
+                    <div class="film">
+                        <h4 class="title">Дневники вампира</h4>
+                        <a href="#" class="card__img">
+                        <img src="./img/vampireDiaries 2.jpg" alt="Дневники вампира" class="picture__dv" width="216" height="312">
+                    </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">8.9</span>
+                        <span class="year__film">2009</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card__film" data-genre="fantasy">
+                    <div class="film">
+                        <h4 class="title">Дневники вампира</h4>
+                        <a href="#" class="card__img">
+                        <img src="./img/vampireDiaries 2.jpg" alt="Дневники вампира" class="picture__dv" width="216" height="312">
+                    </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">8.9</span>
+                        <span class="year__film">2009</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card__film" data-genre="fantasy">
+                    <div class="film">
+                        <h4 class="title">Дневники вампира</h4>
+                        <a href="#" class="card__img">
+                        <img src="./img/vampireDiaries 2.jpg" alt="Дневники вампира" class="picture__dv" width="216" height="312">
+                    </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">8.9</span>
+                        <span class="year__film">2009</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card__film" data-genre="fantasy">
+                    <div class="film">
+                        <h4 class="title">Дневники вампира</h4>
+                        <a href="#" class="card__img">
+                        <img src="./img/vampireDiaries 2.jpg" alt="Дневники вампира" class="picture__dv" width="216" height="312">
+                    </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">8.9</span>
+                        <span class="year__film">2009</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card__film" data-genre="fantasy">
+                    <div class="film">
+                        <h4 class="title">Дневники вампира</h4>
+                        <a href="#" class="card__img">
+                        <img src="./img/vampireDiaries 2.jpg" alt="Дневники вампира" class="picture__dv" width="216" height="312">
+                    </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">8.9</span>
+                        <span class="year__film">2009</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card__film" data-genre="fantasy">
+                    <div class="film">
+                        <h4 class="title">Дневники вампира</h4>
+                        <a href="#" class="card__img">
+                        <img src="./img/vampireDiaries 2.jpg" alt="Дневники вампира" class="picture__dv" width="216" height="312">
+                    </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">8.9</span>
+                        <span class="year__film">2009</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card__film" data-genre="fantasy">
+                    <div class="film">
+                        <h4 class="title">Дневники вампира</h4>
+                        <a href="#" class="card__img">
+                        <img src="./img/vampireDiaries 2.jpg" alt="Дневники вампира" class="picture__dv" width="216" height="312">
+                    </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">8.9</span>
+                        <span class="year__film">2009</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card__film" data-genre="fantasy">
+                    <div class="film">
+                        <h4 class="title">Дневники вампира</h4>
+                        <a href="#" class="card__img">
+                        <img src="./img/vampireDiaries 2.jpg" alt="Дневники вампира" class="picture__dv" width="216" height="312">
+                    </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">8.9</span>
+                        <span class="year__film">2009</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card__film" data-genre="fantasy">
+                    <div class="film">
+                        <h4 class="title">Дневники вампира</h4>
+                        <a href="#" class="card__img">
+                        <img src="./img/vampireDiaries 2.jpg" alt="Дневники вампира" class="picture__dv" width="216" height="312">
+                    </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">8.9</span>
+                        <span class="year__film">2009</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card__film" data-genre="fantasy">
+                    <div class="film">
+                        <h4 class="title">Дневники вампира</h4>
+                        <a href="#" class="card__img">
+                        <img src="./img/vampireDiaries 2.jpg" alt="Дневники вампира" class="picture__dv" width="216" height="312">
+                    </a>
+
+                    <div class="records__film">
+                        <span class="rating__film">8.9</span>
+                        <span class="year__film">2009</span>
+                    </div>
+
+                    <div class="button__add">
+                        <button id="add__playlist">Добавить в плэйлист</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section>
+    </main>
+    <script type="module" src="./js/auth.ts"></script>
+</body>
+</html>

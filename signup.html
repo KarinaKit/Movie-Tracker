@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/signin.css">
+    <title>Регистрация</title>
+</head>
+<body>
+    <div class="signin">
+        <div class="form__login">
+            <div class="title">
+                <span class="line"></span>
+                <p class="text">Регистрация</p>
+                <span class="line"></span>
+            </div>
+            <form class="signup-form">
+                <input class="login" type="email" placeholder="Введите email" novalidate>
+                <small class="email-txt-hide">Некорректная почта</small>
+                <input class="password" type="password" placeholder="Пароль" novalidate>
+                <input class="confirm-password" type="password" placeholder="Повторите пароль" novalidate>
+                <small class="password-txt-hide">Пароль должен содержать более 6 символов</small>
+
+            <div class="btn-log_sign">
+                <button type="submit" class="logIn">Зарегистрироваться</button>
+                <a href="./signin.html" class="signUp">Уже есть аккаунт?</a>
+            </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="./js/signup.ts"></script>
+</body>
+</html>

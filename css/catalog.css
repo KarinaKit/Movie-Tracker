@@ -1,0 +1,435 @@
+body {
+    padding: 20px 65px;
+    background-color: #0d0d0d;
+    color: white;
+    margin: 0;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.content {
+    padding: 0 100px;
+}
+
+button, input, textarea {
+  font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+/*=========header============*/
+
+.catalog__film-search {
+    display: flex;
+    margin-left: auto;
+    gap: 20px;
+}
+
+/*--выпадающий список---*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: #222;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.group  {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 300px;
+    padding: 20px;
+}
+/*-----------------*/
+
+
+.menu-title {
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    font-size: small;
+    color: color(srgb 0.9427 0.7861 0.0114);
+}
+
+.choice__genre:hover {
+    color: color(srgb 0.9427 0.7861 0.0114);
+}
+
+.choice__genre:active {
+    color: rgba(255, 215, 0, 0.8);
+}
+
+#series {
+    background: none;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#series:hover {
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        text-shadow:
+            0 0 10px rgba(255, 215, 0, 0.8),
+            0 0 10px rgba(255, 215, 0, 0.5);
+    }
+
+    50% {
+        text-shadow:
+            0 0 15px rgba(255, 215, 0, 1),
+            0 0 30px rgba(255, 215, 0, 0.8),
+            0 0 50px rgba(255, 215, 0, 0.4);
+    }
+}
+
+#series:active {
+    color: rgba(255, 215, 0, 0.8);
+}
+
+#cartoons {
+    background: none;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#cartoons:hover {
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        text-shadow:
+            0 0 10px rgba(255, 215, 0, 0.8),
+            0 0 10px rgba(255, 215, 0, 0.5);
+    }
+
+    50% {
+        text-shadow:
+            0 0 15px rgba(255, 215, 0, 1),
+            0 0 30px rgba(255, 215, 0, 0.8),
+            0 0 50px rgba(255, 215, 0, 0.4);
+    }
+}
+
+#cartoons:active {
+    color: rgba(255, 215, 0, 0.8);
+}
+
+#login {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    background: black;
+    border: none;
+    border-radius: 12px;
+    padding: 4px 12px;
+    cursor: pointer;
+    font-size: 12px;
+
+    animation: softGlow 4s ease-in-out infinite;
+}
+
+@keyframes softGlow {
+    0%,
+    100% {
+        text-shadow: 0 0 4px rgba(255, 215, 0, 0.15);
+    }
+
+    50% {
+        text-shadow: 0 0 8px rgba(255, 215, 0, 0.35);
+    }
+}
+
+#login:hover {
+    animation: softGlowLogin 2s ease-in-out infinite;
+}
+
+@keyframes softGlowLogin {
+    0%,
+    100% {
+        box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
+    }
+
+    50% {
+        box-shadow:
+            0 0 8px rgba(255, 215, 0, 1),
+            0 0 20px rgba(255, 215, 0, 0.8);
+    }
+}
+
+.search__header {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 0 170px;
+    margin-bottom: 40px;
+}
+
+/*====смытые края и slider========*/
+.hero-slider {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 45px;
+    flex-direction: column;
+}
+
+.slider {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.click-zone {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.left { left: 0; }
+.right { right: 0; }
+
+.img-cap {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: opacity 0.8s ease;
+    opacity: 1;
+    object-fit: cover;
+}
+
+.img-cap.fade {
+    opacity: 0;
+}
+
+.slider-btn {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev { left: 30px; }
+.next { right: 5px; }
+
+.slider img {
+
+    width: 90%;
+    display: block;
+
+  -webkit-mask-image: radial-gradient(
+    ellipse 43% 100% at center,
+    black 47%,
+    transparent 120%
+  );
+
+  mask-image: radial-gradient(
+    ellipse 43% 100% at center,
+    black 47%,
+    transparent 120%
+  );
+}
+
+.slider__link {
+    overflow: hidden;
+}
+
+.slider {
+    overflow: hidden;
+    width: 100%;
+}
+
+.track {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 45px;
+    /* transition: transform 0.6s ease; */
+    gap: 18px;
+    width: max-content;
+    will-change: transform;
+}
+
+.list__link img {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.create__list {
+    display: block;
+    width: 330px;
+    border-radius: 7px;
+    animation: softGlow 4s ease-in-out infinite;
+}
+
+@keyframes softGlow {
+    0%,
+    100% {
+        filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.15));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.35));
+    }
+}
+
+.btn__choice {
+    display: flex;
+    gap: 34px;
+    margin-bottom: 25px;
+}
+
+#btn {
+    background: black;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 12px;
+    font-weight: 500;
+    font-size: 12px;
+
+    animation: softGlow 4s ease-in-out infinite;
+}
+
+@keyframes softGlow {
+    0%,
+    100% {
+        box-shadow: 0 0 12px rgba(255, 215, 0, 0.15);
+    }
+
+    50% {
+        box-shadow: 0 0 8px rgba(255, 215, 0, 0.35);
+    }
+}
+
+#btn:hover {
+    animation: softGlowHover 2s ease-in-out infinite;
+}
+
+@keyframes softGlowHover {
+    0%,
+    100% {
+        box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
+    }
+
+    50% {
+        box-shadow:
+            0 0 8px rgba(255, 215, 0, 1),
+            0 0 20px rgba(255, 215, 0, 0.8);
+    }
+}
+
+.btn__link {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.catalog__cinema {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.film {
+    width: 213px;
+}
+
+.title {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card__img {
+  display: block;
+}
+
+.picture__dv {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.records__film {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -25px;
+    font-size: 12px;
+    padding: 0 10px 0;
+    margin-bottom: 20px;
+}
+
+.rating__film {
+    background: rgb(205, 171, 7);
+    color: white;
+    /* background: rgba(0, 200, 0, 0.85); */
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.year__film {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.button__add {
+    display: flex;
+    justify-content: center;
+}
+
+#add__playlist {
+    padding: 6px 46px;
+    background: rgb(28, 28, 28);
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+#add__playlist:hover {
+    background-color: rgb(32, 31, 31);
+}
+
+#add__playlist:active {
+    background-color: rgb(38, 37, 37);
+}
