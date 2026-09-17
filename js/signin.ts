@@ -50,11 +50,11 @@ form?.addEventListener("submit", async (event: SubmitEvent) => {
     });
 
     if (error) {
-        console.log(error.message);
-        return;
+    passwordError!.style.display = 'block';
+    return;
     }
 
     console.log("Форма отправлена");
 
-    window.location.href = "./catalog.html";
+    window.location.href = "./index.html";
 });

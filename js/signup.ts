@@ -62,5 +62,5 @@ form?.addEventListener("submit", async (event) => {
 
     console.log("Регистрация упешна");
 
-    window.location.href = "./catalog.html";
+    window.location.href = "./index.html";
 });
